@@ -28,4 +28,8 @@ public class Wallet implements Serializable {
     private String priority; // 1=High; 2=Medium; 3=Low
     @Column(name="CrrntBlnc")
     private Double currentBalance;
+    @PrePersist
+    public void setBalance() {
+        this.currentBalance = Double.valueOf(0);
+    }
 }
