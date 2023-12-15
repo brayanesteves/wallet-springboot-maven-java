@@ -25,7 +25,7 @@ public class Wallet implements Serializable {
     @Column(name="Dscrptn")
     private String description;
     @Column(name="Prrty")
-    private String priority; // 1=High; 2=Medium; 3=Low
+    private Integer priority; // 1=High; 2=Medium; 3=Low
     @Column(name="CrrntBlnc")
     private Double currentBalance;
     @PrePersist
