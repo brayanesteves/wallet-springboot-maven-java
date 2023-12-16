@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "241fd1e1-31b8-45fa-9b8a-f2bb7a4a3024",
+		"name": "wallet-springboot-maven-java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20955189"
+	},
+	"item": [
+		{
+			"name": "00 - LOCAL",
+			"item": [
+				{
+					"name": "00 - GET",
+					"item": [
+						{
+							"name": "[GET]",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "01 - POST",
+					"item": [
+						{
+							"name": "[POST] Add Wallet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Test\",\n    \"accountManager\":\"\",\n    \"description\":\"Description Test\",\n    \"priority\":1,\n    \"currentBalance\":22.00\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/wallet",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"wallet"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "HTTP 201 (Created)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\":\"Test\",\n    \"accountManager\":\"\",\n    \"description\":\"Description Test\",\n    \"priority\":1,\n    \"currentBalance\":22.00\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8090/wallet",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"wallet"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 15 Dec 2023 00:33:25 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"reference\": 1,\n    \"name\": \"Test\",\n    \"accountManager\": \"\",\n    \"description\": \"Description Test\",\n    \"priority\": 1,\n    \"currentBalance\": 0\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "02 - PUT",
+					"item": []
+				},
+				{
+					"name": "03 - DELETE",
+					"item": []
+				}
+			]
+		}
+	]
+}
