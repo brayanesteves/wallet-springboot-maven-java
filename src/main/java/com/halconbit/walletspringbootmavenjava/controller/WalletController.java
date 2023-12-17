@@ -20,6 +20,21 @@ public class WalletController {
     @Autowired
     private HandleErrorService handleErrorService;
 
+    @GetMapping("/find-all")
+    public ResponseEntity<?> findAll() {
+        return new ResponseEntity<>(this.walletService.findAll(), HttpStatus.OK);
+    }
+
+    @GetMapping("/find-all-order-by-priority")
+    public ResponseEntity<?> findAllOrderByPriority() {
+        return new ResponseEntity<>(this.walletService.findAllByOrderByPriority(), HttpStatus.OK);
+    }
+
+    @GetMapping("/{reference}")
+    public ResponseEntity<?> findByReference(@PathVariable Long reference) {
+        return new ResponseEntity<>(this.walletService.findByReference(reference), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<?> create(@RequestBody Wallet wallet, BindingResult bindingResult) {
         ResponseEntity responseEntityErrors = this.handleErrorService.validate(bindingResult);

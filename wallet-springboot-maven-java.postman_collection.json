@@ -13,12 +13,205 @@
 					"name": "00 - GET",
 					"item": [
 						{
-							"name": "[GET]",
+							"name": "[GET] Find All",
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/wallet/find-all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"wallet",
+										"find-all"
+									]
+								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "HTTP 200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8090/wallet/find-all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"wallet",
+												"find-all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 17 Dec 2023 00:41:38 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"reference\": 1,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 2,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 3,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 4,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 5,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 6,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 7,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[GET] Find All Order By Priority",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/wallet/find-all-order-by-priority",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"wallet",
+										"find-all-order-by-priority"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "HTTP 200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8090/wallet/find-all-order-by-priority",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"wallet",
+												"find-all-order-by-priority"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 17 Dec 2023 00:42:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"reference\": 1,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 2,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 3,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 4,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 5,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 6,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    },\n    {\n        \"reference\": 7,\n        \"name\": \"Test\",\n        \"accountManager\": \"\",\n        \"description\": \"Description Test\",\n        \"priority\": 1,\n        \"currentBalance\": 0\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[GET] Find By Reference",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/wallet/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"wallet",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "HTTP 200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8090/wallet/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"wallet",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 17 Dec 2023 00:42:35 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"reference\": 1,\n    \"name\": \"Test\",\n    \"accountManager\": \"\",\n    \"description\": \"Description Test\",\n    \"priority\": 1,\n    \"currentBalance\": 0\n}"
+								}
+							]
 						}
 					]
 				},
