@@ -30,6 +30,17 @@ public class WalletController {
         return new ResponseEntity<Wallet>(walletCreateOrUpdate, HttpStatus.CREATED);
     }
 
+    @PutMapping("/{reference}")
+    public ResponseEntity<?> update(@PathVariable Long reference, @RequestBody Wallet wallet, BindingResult bindingResult) {
+        ResponseEntity responseEntityErrors = this.handleErrorService.validate(bindingResult);
+        if(responseEntityErrors != null) {
+            return responseEntityErrors;
+        }
+        wallet.setReference(reference);
+        Wallet walletCreateOrUpdate = this.walletService.createOrUpdate(wallet);
+        return new ResponseEntity<Wallet>(walletCreateOrUpdate, HttpStatus.OK);
+    }
+
     @DeleteMapping("/{reference}")
     public ResponseEntity<?> delete(@PathVariable Long reference) {
         this.walletService.delete(reference);
