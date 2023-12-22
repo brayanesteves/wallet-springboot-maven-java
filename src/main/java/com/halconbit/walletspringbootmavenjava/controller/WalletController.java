@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/wallet")
+@CrossOrigin
 public class WalletController {
 
     @Autowired
