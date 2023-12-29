@@ -1,6 +1,7 @@
 package com.halconbit.walletspringbootmavenjava.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -36,6 +37,7 @@ public class Transaction implements Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "Rfrnc_Wllt", nullable = false)
+    @JsonIgnore
     private Wallet wallet;
 
     @PrePersist
