@@ -1,5 +1,6 @@
 package com.halconbit.walletspringbootmavenjava.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,5 +31,11 @@ public class Transaction implements Serializable {
     private int type; // 1 for Income, 2 for Expense, 3 for Transfer.
 
     @Column(name="TrnsctnDt")
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date transactionDate;
+
+    @PrePersist
+    public void setTransactionDate() {
+        this.transactionDate = new Date();
+    }
 }
