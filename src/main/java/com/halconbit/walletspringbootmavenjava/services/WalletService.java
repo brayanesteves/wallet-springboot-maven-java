@@ -29,7 +29,7 @@ public class WalletService {
             return walletOptional.get();
         }
         // TODO
-        throw  new WalletException("Wallet with " + reference + " dows not exists!");
+        throw new WalletException("Wallet with " + reference + " dows not exists!");
     }
 
     public Wallet createOrUpdate(Wallet wallet) {
@@ -48,7 +48,7 @@ public class WalletService {
             return true;
         }
         // TODO
-        throw  new WalletException("Wallet with " + reference + " dows not exists!");
+        throw new WalletException("Wallet with " + reference + " dows not exists!");
     }
 
 }
