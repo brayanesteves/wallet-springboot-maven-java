@@ -34,6 +34,10 @@ public class Transaction implements Serializable {
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date transactionDate;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "Rfrnc_Wllt", nullable = false)
+    private Wallet wallet;
+
     @PrePersist
     public void setTransactionDate() {
         this.transactionDate = new Date();
