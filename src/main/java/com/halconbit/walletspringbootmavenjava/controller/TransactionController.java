@@ -45,4 +45,16 @@ public class TransactionController {
         return new ResponseEntity<Transaction>(transactionCreateOrUpdate, HttpStatus.CREATED);
     }
 
+    @PutMapping("/{walletReference}/{reference}")
+    public ResponseEntity<?> update(@PathVariable Long walletReference, @PathVariable Long reference, @RequestBody Transaction transaction, BindingResult bindingResult) {
+        ResponseEntity responseEntityErrors = this.handleErrorService.validate(bindingResult);
+        if(responseEntityErrors != null) {
+            return responseEntityErrors;
+        }
+        transaction.setReference(reference);
+        Transaction transactionUpdate = this.transactionService.walletCreateOrUpdate(walletReference, transaction);
+        return new ResponseEntity<Transaction>(transactionUpdate, HttpStatus.OK);
+
+    }
+
 }
