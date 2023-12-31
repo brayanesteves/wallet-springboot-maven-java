@@ -217,6 +217,306 @@
 									]
 								}
 							]
+						},
+						{
+							"name": "01 - TRANSACTION",
+							"item": [
+								{
+									"name": "[GET] Find All",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8090/transaction/find-all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"transaction",
+												"find-all"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "HTTP 200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8090/transaction/find-all",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8090",
+													"path": [
+														"transaction",
+														"find-all"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 11:12:12 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"reference\": 1,\n        \"amount\": 2000,\n        \"description\": \"Test\",\n        \"type\": 1,\n        \"transactionDate\": \"2023-09-31\"\n    },\n    {\n        \"reference\": 2,\n        \"amount\": 2000,\n        \"description\": \"Test\",\n        \"type\": 1,\n        \"transactionDate\": \"2023-11-31\"\n    },\n    {\n        \"reference\": 3,\n        \"amount\": 2000,\n        \"description\": \"Test\",\n        \"type\": 1,\n        \"transactionDate\": \"2023-11-31\"\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[GET] Find All By Wallet Reference",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8090/transaction/find-all-by-wallet/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"transaction",
+												"find-all-by-wallet",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "HTTP 200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8090/transaction/find-all-by-wallet/1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8090",
+													"path": [
+														"transaction",
+														"find-all-by-wallet",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 11:13:11 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"reference\": 1,\n        \"amount\": 2000,\n        \"description\": \"Test\",\n        \"type\": 1,\n        \"transactionDate\": \"2023-09-31\"\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[GET] Find By Wallet Reference And Reference",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8090/wallet/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"wallet",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "HTTP 400 BAD REQUEST",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8090/transaction/1/1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8090",
+													"path": [
+														"transaction",
+														"1",
+														"1"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 11:04:45 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"timestamp\": \"2023-12-31T11:04:45.630+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"com.halconbit.walletspringbootmavenjava.exception.TransactionException: Transaction with 1 does not exists!\\n\\tat com.halconbit.walletspringbootmavenjava.services.TransactionService.findByWalletReferenceAndReference(TransactionService.java:53)\\n\\tat com.halconbit.walletspringbootmavenjava.controller.TransactionController.findByWalletReferenceAndReference(TransactionController.java:35)\\n\\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:578)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:1589)\\n\",\n    \"message\": \"Transaction with 1 does not exists!\",\n    \"path\": \"/transaction/1/1\"\n}"
+										},
+										{
+											"name": "HTTP 200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8090/transaction/1/1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8090",
+													"path": [
+														"transaction",
+														"1",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 11:13:38 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"reference\": 1,\n    \"amount\": 2000,\n    \"description\": \"Test\",\n    \"type\": 1,\n    \"transactionDate\": \"2023-09-31\"\n}"
+										}
+									]
+								}
+							]
 						}
 					]
 				},
@@ -306,6 +606,108 @@
 											],
 											"cookie": [],
 											"body": "{\n    \"reference\": 1,\n    \"name\": \"Test\",\n    \"accountManager\": \"\",\n    \"description\": \"Description Test\",\n    \"priority\": 1,\n    \"currentBalance\": 0\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "01 - TRANSACTION",
+							"item": [
+								{
+									"name": "[POST] Add Transaction",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"amount\":2000.00,\n    \"description\":\"Test\",\n    \"type\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8090/transaction/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8090",
+											"path": [
+												"transaction",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "HTTP 201 (Created)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"amount\":2000.00,\n    \"description\":\"Test\",\n    \"type\":1\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://localhost:8090/transaction/1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8090",
+													"path": [
+														"transaction",
+														"1"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 11:09:19 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"reference\": 1,\n    \"amount\": 2000,\n    \"description\": \"Test\",\n    \"type\": 1,\n    \"transactionDate\": \"2023-09-31\"\n}"
 										}
 									]
 								}
@@ -405,6 +807,10 @@
 									]
 								}
 							]
+						},
+						{
+							"name": "01 - TRANSACTION",
+							"item": []
 						}
 					]
 				},
@@ -478,6 +884,10 @@
 									]
 								}
 							]
+						},
+						{
+							"name": "01 - TRANSACTION",
+							"item": []
 						}
 					]
 				}
