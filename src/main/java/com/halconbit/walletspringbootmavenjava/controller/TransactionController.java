@@ -57,4 +57,16 @@ public class TransactionController {
 
     }
 
+    @DeleteMapping("/{reference}")
+    public ResponseEntity<?> delete(@PathVariable Long reference) {
+        this.transactionService.delete(reference);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{walletReference}/{reference}")
+    public ResponseEntity<?> deleteByWalletReferenceAndReference(@PathVariable Long walletReference, @PathVariable Long reference) {
+        this.transactionService.deleteByWalletReferenceAndReference(walletReference, reference);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }
